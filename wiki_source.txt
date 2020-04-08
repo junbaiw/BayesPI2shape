@@ -1,0 +1,39 @@
+= Predicting variation of DNA shape preferences in protein-DNA interaction in cancer cells with a new biophysical model =
+
+[{w:200px;vertical-align:middle}img:dnk.jpg, This work was supported by the Norwegian Cancer Society] [{padding-left:10em;vertical-align:middle}img:OUS\_logo\_eng.jpg, Oslo University Hospital] [{padding-left:10em;vertical-align:middle}img:helse-sor-ost.jpg, This work was supported by the South-Eastern Norway Regional Health Authority]
+
+== Authors ==
+[mailto:kirill.batmanov@rr-research.no,Kirill Batmanov]^1^ and [mailto:junbai.wang@rr-research.no,Junbai Wang]^1^
+
+^1^Department of Pathology, Norwegian Radium Hospital, PO Box 4953 Nydalen, 0424 Oslo, Norway
+
+== Abstract ==
+DNA shape readout is an important mechanism of target site recognition by transcription factors, in addition to the sequence readout. Several models of transcription factor-DNA binding which consider DNA shape have been developed in recent years. We present a new biophysical model of protein-DNA interaction by considering the DNA shape features, which is based on a neighbour dinucleotide dependency model *BayesPI2*. The parameters of the new model are restricted to a subspace spanned by the 2-mer DNA shape features, which allowing a biophysical interpretation of the new parameters as position-dependent preferences towards certain values of the features. Using the new model, we explore the variation of DNA shape preferences in several transcription factors across cancer cell lines and cellular conditions. We find evidence of DNA shape variations at FOXA1 binding sites in MCF7 cells after treatment with steroids. The new model is useful for elucidating finer details of transcription factor-DNA interaction. It may be used to improve the prediction of cancer mutation effects in the future.
+== Code ==
+{;C:lightgreen}The *BayesPI2* package which can fit dinucleotide shape features can be downloaded [bayespi2\_shape_package.tgz, here].
+
+The package contains BayesPI2 binaries for Mac and Linux, and includes a demo which fits FOXA1 shape preferences in MCF7 treated and untreated cell line, as described in the paper. The demo is written in Python 2. Here is the full list of the demo dependencies:
+
+* Python 2 interpreter: https://www.python.org/downloads/
+* seaborn, if the heatmap making function is used: https://seaborn.pydata.org/
+* numpy: http://www.numpy.org/
+
+You can use the %pip install numpy seaborn% command to install the Python libraries.
+
+To test the basic functionality, go to the %demo_scripts% folder and run the command %python foxa1_shape_demo.py% . Run BayesPI2 binaries with the %-help% command line option to see their usage information.
+
+
+== References ==
+1. BayesPI - a new model to study protein-DNA interactions: a case study of condition-specific protein binding parameters for Yeast transcription factors.
+Wang J, Morigen.
+_BMC Bioinformatics_. 2009 Oct 20;10:345. doi: 10.1186/1471-2105-10-345.
+[https://www.ncbi.nlm.nih.gov/pubmed/19857274, [PMID:19857274]]
+
+1. Quality versus accuracy: result of a reanalysis of protein-binding microarrays from the DREAM5 challenge by using BayesPI2 including dinucleotide interdependence.
+Wang J.
+_BMC Bioinformatics_. 2014 Aug 27;15:289. doi: 10.1186/1471-2105-15-289.
+[https://www.ncbi.nlm.nih.gov/pubmed/25158938, [PMID:25158938]]
+
+1. Predicting variation of DNA shape preferences in protein-DNA interaction in cancer cells with a new biophysical model.
+Kirill Batmanov and Junbai Wang (_submitted_)
+

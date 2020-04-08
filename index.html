@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+<title>BayesPI2-shape</title>
+</head>
+<html>
+<body>
+
+
+<h1> Predicting variation of DNA shape preferences in protein-DNA interaction in cancer cells with a new biophysical model </h1>
+
+<p><img style="width:200px;vertical-align:middle;" src="dnk.jpg" alt=" This work was supported by the Norwegian Cancer Society" title=" This work was supported by the Norwegian Cancer Society"/> <img style="padding-left:10em;vertical-align:middle;" src="OUS_logo_eng.jpg" alt=" Oslo University Hospital" title=" Oslo University Hospital"/> <img style="padding-left:10em;vertical-align:middle;" src="helse-sor-ost.jpg" alt=" This work was supported by the South-Eastern Norway Regional Health Authority" title=" This work was supported by the South-Eastern Norway Regional Health Authority"/>
+</p>
+<h2> Authors </h2>
+<p>
+<a href="mailto:kirill.batmanov@rr-research.no">Kirill Batmanov</a><sup>1</sup> and <a href="mailto:junbai.wang@rr-research.no">Junbai Wang</a><sup>1</sup></p>
+<p><sup>1</sup>Department of Pathology, Norwegian Radium Hospital, PO Box 4953 Nydalen, 0424 Oslo, Norway
+</p>
+<h2> Abstract </h2>
+<p>
+DNA shape readout is an important mechanism of target site recognition by transcription factors, in addition to the sequence readout. Several models of transcription factor-DNA binding which consider DNA shape have been developed in recent years. We present a new biophysical model of protein-DNA interaction by considering the DNA shape features, which is based on a neighbour dinucleotide dependency model <strong>BayesPI2</strong>. The parameters of the new model are restricted to a subspace spanned by the 2-mer DNA shape features, which allowing a biophysical interpretation of the new parameters as position-dependent preferences towards certain values of the features. Using the new model, we explore the variation of DNA shape preferences in several transcription factors across cancer cell lines and cellular conditions. We find evidence of DNA shape variations at FOXA1 binding sites in MCF7 cells after treatment with steroids. The new model is useful for elucidating finer details of transcription factor-DNA interaction. It may be used to improve the prediction of cancer mutation effects in the future.</p>
+<h2> Code </h2>
+<p style=":undefined;background:lightgreen;">The <strong>BayesPI2</strong> package which can fit dinucleotide shape features can be downloaded <a href="bayespi2_shape_package.tgz"> here</a>.</p>
+<p>The package contains BayesPI2 binaries for Mac and Linux, and includes a demo which fits FOXA1 shape preferences in MCF7 treated and untreated cell line, as described in the paper. The demo is written in Python 2. Here is the full list of the demo dependencies:
+</p><ul>
+<li class="u">Python 2 interpreter: <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></li>
+<li class="u">seaborn, if the heatmap making function is used: <a href="https://seaborn.pydata.org/">https://seaborn.pydata.org/</a></li>
+<li class="u">numpy: <a href="http://www.numpy.org/">http://www.numpy.org/</a></li></ul>
+<p>You can use the <code>pip install numpy seaborn</code> command to install the Python libraries.</p>
+<p>To test the basic functionality, go to the <code>demo_scripts</code> folder and run the command <code>python foxa1_shape_demo.py</code> . Run BayesPI2 binaries with the <code>-help</code> command line option to see their usage information.</p>
+
+<h2> References </h2>
+<ol style="list-style-type:decimal;">
+<li class="1">BayesPI - a new model to study protein-DNA interactions: a case study of condition-specific protein binding parameters for Yeast transcription factors.
+Wang J, Morigen.
+<em>BMC Bioinformatics</em>. 2009 Oct 20;10:345. doi: 10.1186/1471-2105-10-345.
+<a href="https://www.ncbi.nlm.nih.gov/pubmed/19857274"> [PMID:19857274</a>]
+</li>
+<li class="1">Quality versus accuracy: result of a reanalysis of protein-binding microarrays from the DREAM5 challenge by using BayesPI2 including dinucleotide interdependence.
+Wang J.
+<em>BMC Bioinformatics</em>. 2014 Aug 27;15:289. doi: 10.1186/1471-2105-15-289.
+<a href="https://www.ncbi.nlm.nih.gov/pubmed/25158938"> [PMID:25158938</a>]
+</li>
+<li class="1">Predicting variation of DNA shape preferences in protein-DNA interaction in cancer cells with a new biophysical model.
+Kirill Batmanov and Junbai Wang. <em>Genes</em>. 2017 Sep. doi:10.3390/genes8090233 <a href="https://www.ncbi.nlm.nih.gov/pubmed/28927002"> [PMID:28927002</a>]  </li></ol>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98278907-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
